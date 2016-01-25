@@ -4,6 +4,7 @@
 
  - LinkedIn: [Pablo Pussell](https://www.linkedin.com/in/pablopussell)
  - CV: 
+
 #In Short
  - Enthusiastic and high-achieving undergraduate student who is self-motivated, confident and hard-working.
  - Contributes to group projects with direct input and a positive attitude.
