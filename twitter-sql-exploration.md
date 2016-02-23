@@ -9,20 +9,24 @@ How many unique users?
 * rawdf.user_id.nunique()
 * 918911
 - - - -
+
 How many tweets contains more than one URL?
 * sum(rawdf.text.str.count('http')>1)
 * 19899
 - - - -
+
 How many tweets are geotagged (have latitude and longitude )?
 * 2129755 - sum(rawdf.geo.str.count('None'))
 * 15572
 - - - -
+
 How many tweets are original (e.g., not retweets)?
 * rawdf.groupby(['retweeted']).apply(len)
 * retweeted?
 * False : 2129597
 * True : 5
 - - - -
+
 How many tweets for each day? In average?
 * daydf = pd.DataFrame(rawdf.created_at.str.split('T',1).tolist(),columns = ['day','time'])
 * daydf.groupby(['day']).apply(len)
@@ -58,10 +62,13 @@ How many tweets for each day? In average?
 * 2013-02-25 : 70160
 * Average = 73439.8275862069
 - - - -
+
 Day of the week with highest volume of traffic?
    
 - - - - 
+
 Which are the most popular user_location ?
    
 - - - -
+
 Which are the most popular hashtags?
