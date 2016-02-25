@@ -84,9 +84,24 @@ Day of the week with highest volume of traffic?
 * 5  :  327970
 * 6  :  289138
 
+Saturday is the busiest day in terms of traffic
 - - - - 
 
 Which are the most popular user_location ?
+
+* uldf = pd.DataFrame(rawdf.groupby('user_location').apply(len))
+* uldf.sort(columns=[0],ascending=False).head(10)
+* user_location	
+* London	: 21250
+* New York, NY	: 12095
+* Los Angeles	: 11237
+* New York	: 10892
+* Los Angeles, CA	: 9456
+* NYC	: 9197
+* San Francisco	: 8863
+* New York City	: 8713
+* San Francisco, CA	: 8048
+* Brooklyn, NY	: 7814
 
 - - - -
 
