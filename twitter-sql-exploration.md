@@ -3,21 +3,25 @@
 How many tweets?
 * rawdf.shape
 * 2129755
+
 - - - -
 
 How many unique users?
 * rawdf.user_id.nunique()
 * 918911
+
 - - - -
 
 How many tweets contains more than one URL?
 * sum(rawdf.text.str.count('http')>1)
 * 19899
+
 - - - -
 
 How many tweets are geotagged (have latitude and longitude )?
 * 2129755 - sum(rawdf.geo.str.count('None'))
 * 15572
+
 - - - -
 
 How many tweets are original (e.g., not retweets)?
@@ -25,6 +29,7 @@ How many tweets are original (e.g., not retweets)?
 * retweeted?
 * False : 2129597
 * True : 5
+
 - - - -
 
 How many tweets for each day? In average?
@@ -61,6 +66,7 @@ How many tweets for each day? In average?
 * 2013-02-24 : 88286
 * 2013-02-25 : 70160
 * Average = 73439.8275862069
+
 - - - -
 
 Day of the week with highest volume of traffic?
@@ -70,18 +76,18 @@ Day of the week with highest volume of traffic?
 * daydf['day_of_week'] = daydf['day'].dt.dayofweek
 * daydf.groupby('day_of_week').apply(len)
 * day_of_week
-* 0    309972
-* 1    300859
-* 2    301788
-* 3    291626
-* 4    308402
-* 5    327970
-* 6    289138
-   
+* 0  :  309972
+* 1  :  300859
+* 2  :  301788
+* 3  :  291626
+* 4  :  308402
+* 5  :  327970
+* 6  :  289138
+
 - - - - 
 
 Which are the most popular user_location ?
-   
+
 - - - -
 
 Which are the most popular hashtags?
