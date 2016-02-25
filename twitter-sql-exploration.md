@@ -64,6 +64,19 @@ How many tweets for each day? In average?
 - - - -
 
 Day of the week with highest volume of traffic?
+
+* daydf['created_at'] =  pd.to_datetime(rawdf['created_at'], infer_datetime_format=True)
+* daydf['day'] = pd.to_datetime(daydf['day'])
+* daydf['day_of_week'] = daydf['day'].dt.dayofweek
+* daydf.groupby('day_of_week').apply(len)
+* day_of_week
+* 0    309972
+* 1    300859
+* 2    301788
+* 3    291626
+* 4    308402
+* 5    327970
+* 6    289138
    
 - - - - 
 
